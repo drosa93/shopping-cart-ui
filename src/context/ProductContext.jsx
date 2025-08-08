@@ -10,7 +10,7 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("/api/products");
+        const res = await fetch("https://mock-api-zk2c.onrender.com/products");
         if (!res.ok) throw new Error("failed to fetch products");
         const data = await res.json();
         setProducts(data);
